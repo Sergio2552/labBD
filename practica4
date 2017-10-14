@@ -1,0 +1,61 @@
+use Cine3
+GO
+
+
+insert into Salas values (100,45,'General',1,16)
+insert into Salas values (50,70.50,'Premium',2,17)
+insert into Salas values (100,80.00,'4DX',5,18)
+insert into Salas values (100,45.0,'General',4,19)
+
+insert into Posicion values('Intendente')
+insert into Posicion values('Gerente')
+insert into Posicion values('Cajero')
+insert into Posicion values('Cajero')
+
+insert into Trabajadores values ('Juan Carlos','Rodriguez Aguiñaga',30,1,4)
+insert into Trabajadores values ('Ana Lucia','Gonzalez Aguiñaga',24,2,3)
+insert into Trabajadores values ('Aracely ','Valdez Flores',18,3,2)
+insert into Trabajadores values ('Jorge David ','Sosa Mendez',26,4,1)
+
+
+insert into Pelicula values ('El hombre araña 2', 'Hola 2' , '01:24:39', 'B', 'Accion')
+insert into Pelicula values ('Los vengadores', 'Todos se terminan peleando' , '01:02:34', 'B', 'Accion')
+insert into Pelicula values ('Pocahontas', 'Caricatura de guerra' , '01:45:02', 'AA', 'Aventura')
+insert into Pelicula values ('Transformers', 'Una pelicula de robots que se matan :v' , '02:10:00', 'B15', 'Accion')
+insert into Pelicula values ('Los Ilusionistas', 'Unos magos', '01:55:01', 'B', 'Ciencia Ficcion')
+
+
+insert into Sucursal values (1,'Fiesta Anahuac' ,'Calle Manzana No. 236, Residencial Anahuac, Anáhuac, 66457 San Nicolás de los Garza, N.L.','8183767258' )
+insert into Sucursal values (2,'Santo Domingo' ,'Av. Santo Domingo No. 705, Jardín De San Nicolás, Sin Nombre de Col 13, 66414 San Nicolás de los Garza, N.L.','8007108888' )
+insert into Sucursal values (3,'Plaza Bella' ,'Av. Sendero Divisorio 1001, Privadas de Anáhuac, Cerrada de Anáhuac Residencial, 66417 Cd Gral Escobedo, N.L.','8007108888' )
+insert into Sucursal values (4,'Mol Concordia' ,'Carretera Mezquital-Santa Rosa, No. 5000 Esq. Av. La Concordia, Apodaca N.L.','52576969' )
+insert into Sucursal values (5,'Las Plazas Outlet' ,'Manuel L. Barragán No. 220 Col. Exhacienda el Canadá, Escobedo, N.L. C.P. 66054','52576969' )
+
+
+UPDATE Trabajadores set Edad='28'
+where Nombre='Juan Carlos' 
+
+UPDATE Pelicula set Sinopsis='El hombre araña pelea contra el doctor octopus :v'
+where IDPelicula=16
+
+UPDATE Pelicula set Duracion='1:16:24'
+where IDPelicula=18
+
+Update Posicion set Posicion='Intendente'
+where IDPosicion=3
+
+Update Posicion set Posicion='Cajero'
+where IDPosicion=1
+
+
+
+delete from Pelicula where Nombre='Pocahontas'
+delete from Salas where IDSalas=3
+delete from Posicion where IDPosicion=2
+delete from Trabajadores where Nombre='Aracely'
+delete from Sucursales where IDSucursal=3
+
+
+
+
+
