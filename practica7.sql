@@ -28,3 +28,14 @@ delete from Pelicula
 where IDPelicula=@var1
 end
 exec rmPelicula 1002
+
+create trigger NoEnableDelSucursal on Pelicula
+instead of delete
+as 
+print 'No se pueden borrar sucursales ahi ganamos dinero :v'
+
+
+create trigger algoTrigger on Pelicula
+after insert
+as
+print 'Nueva pelicula , mas dinero \:v/'
